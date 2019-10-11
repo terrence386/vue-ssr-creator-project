@@ -3,12 +3,11 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
-const VueSSRPlugin = require('vue-ssr-webpack-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  mode: 'development',
+    mode:'development',
   devtool: isProd
     ? false
     : '#cheap-module-source-map',
@@ -28,19 +27,11 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        // options: {
-        //   compilerOptions: {
-        //     preserveWhitespace: false
-        //   }
-        // },
-        options:{
-            preserveWhitespace: false,
-            postcss: [
-              require('autoprefixer')({
-                browsers: ['last 3 versions']
-              })
-            ]
+        options: {
+          compilerOptions: {
+            preserveWhitespace: false
           }
+        }
       },
       {
         test: /\.js$/,
@@ -78,7 +69,6 @@ module.exports = {
   plugins: isProd
     ? [
         new VueLoaderPlugin(),
-        new VueSSRPlugin(),
         new webpack.optimize.UglifyJsPlugin({
           compress: { warnings: false }
         }),
@@ -89,7 +79,6 @@ module.exports = {
       ]
     : [
         new VueLoaderPlugin(),
-        new VueSSRPlugin(),
         new FriendlyErrorsPlugin()
       ]
 }
