@@ -16,30 +16,32 @@ express + vue + webpack
 
 
 #### 安装教程
-
+```
 1. git clone https://gitee.com/mynoe/vue-ssr-cli.git
 2. cd vue-ssr-cli && npm install
 3. npm dev
+```
 
 #### 使用说明
-
+```
 1. xxxx
 2. xxxx
 3. xxxx
-
+```
 #### 参与贡献
-
+```
 1. Fork 本仓库
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
-
+```
 
 #### 码云
-
+```
 1. 
 2. 
 3. 
 4. 
 5. 
 6. 
+```
