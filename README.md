@@ -7,10 +7,10 @@ vue服务端渲染模板
 express + vue + webpack 
 
 ####  搭建过程遇到的问题
-1.node 中采用es6语法  --->  @babel/preset-env
-2.vue  语法报错      --->   transform-vue-template
-3.webpack 4.0配置项语法更新  
-4.其他的参照文档就OK
+*1.node 中采用es6语法  --->  @babel/preset-env
+*2.vue  语法报错      --->   transform-vue-template
+*3.webpack 4.0配置项语法更新  
+*4.其他的参照文档就OK
 
 
 #### 安装教程
