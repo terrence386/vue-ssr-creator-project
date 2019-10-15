@@ -5,7 +5,8 @@
   "author": "zc",
   "license": "MIT",
   "scripts": {
-    "dev": "node serve"
+    "dev": "node serve",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.client.config.js --progress --hide-modules"
   },
   "dependencies": {
     "@babel/core": "^7.6.4",
@@ -16,9 +17,11 @@
     "babel-plugin-transform-vue-template": "^0.4.2",
     "babel-preset-env": "^1.7.0",
     "compression": "^1.7.4",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
     "element-ui": "2.11.0",
     "express": "^4.17.1",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "js-cookie": "2.2.0",
     "lru-cache": "^5.1.1",
@@ -28,19 +31,23 @@
     "path-to-regexp": "2.4.0",
     "route-cache": "^0.4.4",
     "serve-favicon": "^2.5.0",
+    "stylus-loader": "^3.0.2",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
     "vue-router": "3.0.6",
     "vue-server-renderer": "^2.6.10",
     "vue-template-compiler": "^2.6.10",
     "vuex": "3.1.0",
+    "vuex-router-sync": "^5.0.0",
     "webpack": "^4.41.1",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^3.3.9"
+  },
   "engines": {
     "node": ">=8.9",
     "npm": ">= 3.0.0"

@@ -16,6 +16,9 @@ module.exports = {
     publicPath: '/dist/',
     filename: '[name].[chunkhash].js'
   },
+  optimization:{
+    minimize:true
+  },
   resolve: {
     alias: {
       'public': path.resolve(__dirname, '../public')
@@ -53,7 +56,8 @@ module.exports = {
               use: [
                 {
                   loader: 'css-loader',
-                  options: { minimize: true }
+                  //去掉option 否则打包报错,css-loader配置的API有所改变 
+                  // options: { minimize: true }
                 },
                 'stylus-loader'
               ],
@@ -69,9 +73,9 @@ module.exports = {
   plugins: isProd
     ? [
         new VueLoaderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-          compress: { warnings: false }
-        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //   compress: { warnings: false }
+        // }),
         new webpack.optimize.ModuleConcatenationPlugin(),
         new ExtractTextPlugin({
           filename: 'common.[chunkhash].css'

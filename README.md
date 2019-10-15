@@ -22,11 +22,12 @@ express + vue + webpack
 3. npm dev
 ```
 
-#### 使用说明
+#### 项目发布
 ```
-1. xxxx
-2. xxxx
-3. xxxx
+1.build是webpack干的事儿，只是把单文件组件编译成js或者json清单，SSR本质上和build没关系，SSR就是一个nodejs应用
+2.部署的时候全部部署
+3.编译后会有json, 生产环境renderer的这个json
+4.p2m或者foreve来运行项目
 ```
 #### 参与贡献
 ```
